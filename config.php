@@ -14,7 +14,7 @@
   If you don't know how to do that, leave it or ask your
   sysadmin for guidance.
 
-  This work is copyrighted to Phil Barbier (c) 2003 - 2004.
+  This work is copyrighted to Phil Barbier (c) 2003 - 2005.
   Please do not copy this without permission to the author.
   Also, please do not edit/alter the core code and do not
   distribute this software without permission from the author.
@@ -22,21 +22,11 @@
   Don't be scared to ask, I'm only human ;) I just want to keep
   track of this :) Thanks.
 
-  Phil Barbier - coder@seepies.net
+  Phil Barbier - flimflam@gmail.com
   
   Initial release - 23 October 2003 01:23 EDT (woo)
     
-  Last change: 	built in MS Access support (finalised)
-  		changed initial default layout (post subject format, and position)
-		moved numchar into config.inc away from funcs.inc
-		- changed forumnews.php to reflect this
-		
-		Made the posts basic format as they are in the forum, not including bbcode
-		Code cleanup and small tweaks
-		
-		Changed the system to work for multiple types of forum.
-		Now supports Invision Board forums, though this isn't fully stable, it's
-		release ready.
+  Last change: 	Altered and added in avatar support for phpBB.
 
   For versioning information, see $Id tag for funcs.php
 
@@ -56,7 +46,7 @@ $dbsystem 	= "mysql";
 // This is typically "localhost" - if you don't know, try localhost
 // or consult your hosting company/administrator for more information
 
-$dbhostname 	= "mysql";
+$dbhostname 	= "mysql.philnic.lan";
 
 // Server port - 3306 is default for MySQL and 5432 is for Postgres
 // if you're not sure, use the default or ask your sysadmin.
@@ -69,16 +59,16 @@ $dbport		= "3306";
 
 // Database name - name of database to connect to
 
-$dbname		= "forum";
+$dbname		= "seepies_forum";
 
 // Database username - username to connect to the database with
 
-$dbuser		= "dbuser";
+$dbuser		= "seepies";
 
 // Database password - password for the connection, if this is empty, 
 // make it "" (an empty string)
 
-$dbpassword	= "dbpAsS";
+$dbpassword	= "seeps";
 
 // Forum type - what type of forum are you using?
 // Currently supported forums are phpbb and ib
@@ -99,7 +89,7 @@ $tableprefix	= "phpbb_";
 //		 http://www.mydomain.com/forum/
 //		 http://forum.mydomain.com/
 
-$forumurl	= "http://www.mydomain.com/forum/";
+$forumurl	= "http://www.seepies.net/forum/";
 
 // Forum ID of the forum
 // To get the ID of the forum, you can either look in your phpMyAdmin area,
@@ -107,11 +97,11 @@ $forumurl	= "http://www.mydomain.com/forum/";
 // forum ID in the URL. eg:
 // http://www.mydomain.com/forum/viewforum.php?f=4 - the forum ID here is 4
 
-$forumid	= 1;
+$forumid	= 5;
 
 // Number of recent posts to retrieve (default 5, min. of 1, max. of 10)
 
-$numposts 	= 7;
+$numposts 	= 25;
 
 // Number of characters to retrieve in the post body
 // Example, if this is 200, it will retrieve all text in the post upto that
@@ -132,9 +122,11 @@ $numchar	= 200;
 
 // *** Please note, this will not have any effect for an IB forum yet ***
 
-$firstlast	= 1;
+$firstlast	= 0;
 
 // Whether to use forum user avatars in the post display
+
+// *** NOTE *** This will NOT currently work for Invision Board
 
 // 0 is no, 1 is yes.
 

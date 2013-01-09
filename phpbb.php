@@ -68,25 +68,25 @@ if ($firstlast==0) {
 
   if ($dbsystem!="access") {
 
-  $sql  = "select " . tpc_title . ", " . usr_username . ", " . usr_userid . ", " . usr_avatar . ", " . usr_avtype . ", " . pst_posttime . ", " . tpc_replies . ", " . post_txt_table . "." . pst_postid . ", " . pst_postsub . ", " . pst_posttxt;
-  $sql .= " from " . topic_table . " inner join " . user_table;
-  $sql .= " on " . topic_table . "." . tpc_postid . "=" . user_table . "." . usr_userid;
-  $sql .= " inner join " . post_txt_table;
-  $sql .= " on " . topic_table . "." . $GLOBALS['topicthread'] . "=" . post_txt_table . "." . pst_postid;
-  $sql .= " inner join " . post_table;
-  $sql .= " on " . post_txt_table . "." . pst_postid . "=" . post_table . "." . pst_postid;
-  $sql .= " where " . topic_table . "." . tpc_fid . "=" . $forumid . " and " . tpc_movedid . "=0 order by " . post_table . "." . pst_posttime . " desc limit " . $numposts . ";";
+    $sql  = "select " . tpc_title . ", " . usr_username . ", " . usr_userid . ", " . usr_avatar . ", " . usr_avtype . ", " . pst_posttime . ", " . tpc_replies . ", " . post_txt_table . "." . pst_postid . ", " . pst_postsub . ", " . pst_posttxt;
+    $sql .= " from " . topic_table . " inner join " . user_table;
+    $sql .= " on " . post_table . "." . pst_userid . "=" . user_table . "." . usr_userid;
+    $sql .= " inner join " . post_txt_table;
+    $sql .= " on " . topic_table . "." . $GLOBALS['topicthread'] . "=" . post_txt_table . "." . pst_postid;
+    $sql .= " inner join " . post_table;
+    $sql .= " on " . post_txt_table . "." . pst_postid . "=" . post_table . "." . pst_postid;
+    $sql .= " where " . topic_table . "." . tpc_fid . "=" . $forumid . " and " . tpc_movedid . "=0 order by " . post_table . "." . pst_posttime . " desc limit " . $numposts . ";";
   
   } else {
   
-  $sql  = "select top " . $postno . " " . tpc_title . ", " . usr_username . ", " . usr_userid . ", " . usr_avatar . ", " . usr_avtype . ", " . pst_posttime . ", " . tpc_replies . ", " . post_txt_table . "." . pst_postid . ", " . pst_postsub . ", " . pst_posttxt;
-  $sql .= " from ((" . topic_table . " inner join " . user_table;
-  $sql .= " on " . topic_table . "." . tpc_postid . "=" . user_table . "." . usr_userid;
-  $sql .= ") inner join " . post_txt_table;
-  $sql .= " on " . topic_table . "." . $topicthread . "=" . post_txt_table . "." . pst_postid;
-  $sql .= ") inner join " . post_table;
-  $sql .= " on " . post_txt_table . "." . pst_postid . "=" . post_table . "." . pst_postid;
-  $sql .= " where " . topic_table . "." . tpc_fid . "=" . $forumid . " and " . tpc_movedid . "=0 order by " . post_table . "." . pst_posttime . " desc;";  
+    $sql  = "select top " . $postno . " " . tpc_title . ", " . usr_username . ", " . usr_userid . ", " . usr_avatar . ", " . usr_avtype . ", " . pst_posttime . ", " . tpc_replies . ", " . post_txt_table . "." . pst_postid . ", " . pst_postsub . ", " . pst_posttxt;
+    $sql .= " from ((" . topic_table . " inner join " . user_table;
+    $sql .= " on " . post_table . "." . pst_userid . "=" . user_table . "." . usr_userid;
+    $sql .= ") inner join " . post_txt_table;
+    $sql .= " on " . topic_table . "." . $topicthread . "=" . post_txt_table . "." . pst_postid;
+    $sql .= ") inner join " . post_table;
+    $sql .= " on " . post_txt_table . "." . pst_postid . "=" . post_table . "." . pst_postid;
+    $sql .= " where " . topic_table . "." . tpc_fid . "=" . $forumid . " and " . tpc_movedid . "=0 order by " . post_table . "." . pst_posttime . " desc;";  
   }
 
 function getprofileurl($uid) {

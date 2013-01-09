@@ -1,0 +1,146 @@
+Readme file
+
+  seepies.net Forumnews
+
+  This work is copyrighted to Phil Barbier (c) 2003 - 2005.
+  Please do not copy this without permission to the author.
+  Also, please do not edit/alter the core code(1) and do not
+  distribute this software without permission from the author.
+
+  Please leave the copyright notice intact when using this product,
+  you can change the format, display and the placement but please keep
+  it visible on the page where you use this product. Any other design
+  or page layout is also completely open to the end user.
+
+  Don't be scared to ask, I'm only human ;) I just want to keep
+  track of this :) Thanks.
+
+  For technical support or questions, please use the following:-
+
+  http://www.seepies.net/forum/viewforum.php?f=4
+  Phil Barbier - flimflam@gmail.com
+
+phpBB and phpbb (and likenesses thereof) are known references to the community forum 
+software which belongs to the phpBB group under copyright (c) 2001, 2002 phpBB Group
+
+For more information on phpBB, please visit http://www.phpbb.com/
+
+Invision Board, IPB, IB or any likenesses are all copyright (c) 2003  IPS, Inc.
+
+For more information on Invision Board, please visit http://www.invisionboard.com/
+
+*** Due to licensing changes in Invision Board, I can only currently support version
+1.3 Final ***
+
+I cannot and will not support phpBB or Invision Board, but only the software that is
+contained in this package.
+
+(1) - This does NOT include the HTML and page layout, I actively encourage
+      users of this script to modify the layout/design to seamlessly fit into
+      their page.
+
+===========================
+For Updates, see forum
+===========================
+
+===========================
+ Installation Instructions
+===========================
+
+--------------------------------------------------------------------------------------------------
+Read this if you DO NOT have shell access to the web space (or do not
+know what this means).
+--------------------------------------------------------------------------------------------------
+
+1). Download the .tar file to a location on your PC.
+2). Untar the file (Winzip can handle this) on your PC.
+3). Load up your favourite FTP client, and connect to your web hosting
+    space.
+4). Upload the files you untarred to the desired location in your web
+    hosting area (for example /www/news or /docs/news or something similar, consult
+    your web host for further assistance). 
+    
+*** You can place these files anywhere within your web hosting space as long as they
+    remain intact as they were in the archive (this means the files in db/ have to be
+    placed in db/ wherever you install this to).
+    
+For example:
+
+My forum is located at http://www.mydomain.com/forum/
+My forum website files are located in /www/forum/ in my web hosting space.
+I want to display the forum news information in my main website news page which is
+http://www.mydomain.com/news.php so I choose to install the files in /www on my web space.
+
+Proceed to step 5)
+
+--------------------------------------------------------------------------------------------------
+Read this if you DO have shell access to your web space
+--------------------------------------------------------------------------------------------------
+
+1). Download the .tar file to a location in your shell 
+    (wget http://flimflam.homelinux.org/projects/forumnews/forumnews.tar)
+2). Make the directory and/or ensure that the archive is in the correct desired location for installation.
+3). Untar the archive (tar -xvf forumnews.tar)
+4). This step doesn't really exist - it's not here, you never read it - in fact, there is no Step 4 ;)
+
+Proceed to step 5)
+
+--------------------------------------------------------------------------------------------------
+
+All users read this:-
+
+5). Once the files are uploaded, you can edit the file you want the forum posts to appear in
+    with the following text:- (* Note this has to be a PHP file).
+    
+    <? include("forumnews.php"); ?>
+    
+6). You should be ready to go :) If you encounter any issues, or have any questions or comments
+    related to this utility, please send them either to me (Phil Barbier) at coder@seepies.net or
+    post them at my forum: http://www.seepies.net/forum/viewforum.php?f=4
+
+---------------------------------------------------------------------------------------------------
+
+===========================
+ Configuring the utility
+===========================
+
+Configuration is a relatively trivial matter, the config.php file is the only file you are required
+to edit, and the options therein are straightforward to follow.
+
+Once you have made the appropriate changes to the config.php file then upload/copy the file to the area
+where you installed the script for the changes to take place.
+
+If you do not know the answers to some of the more advanced questions, then leave them at default.
+If the defaults do not work, either contact your web host technical support, or if you prefer an
+answer within a smaller timeframe, post a question on the forum:-
+http://www.seepies.net/forum/viewforum.php?f=4
+
+---------------------------------------------------------------------------------------------------
+
+===========================
+ Layout of the script
+===========================
+
+With web design and layout being so diverse, I've not bothered to make the default layout or look
+anything special. However, I have put the information within self-contained tables (<table> tags)
+so that it ought to be easier to include into your page. If you want to juggle the information around
+and make it fit into your site design, then go right ahead, if you could send me a URL so I can see
+it in action, that'd be great too :)
+
+---------------------------------------------------------------------------------------------------
+
+===========================
+ Notes
+===========================
+
+The coding team is currently only myself, so please expect to wait for replies on the forum.
+Any updates/support/issues can be dealt with on the forum, so that the community can benefit. I will
+try my best to get things attended to in a timely manner.
+
+---------------------------------------------------------------------------------------------------
+
+Phil. <coder@seepies.net> http://www.seepies.net/forum/viewforum.php?f=4
+
+---------------------------------------------------------------------------------------------------
+
+-- EOF.

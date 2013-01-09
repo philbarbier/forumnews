@@ -49,7 +49,7 @@ for($i=0; $i<count($res); $i++) {
     <td>
       <center>
         <h5>
-          <a target="_blank" href="<?=supporturl ?>">seepies.net Forumnews</a> - <?=versioninfo ?> - &copy; Phil Barbier 2003 - 2004 <a href="mailto:coder@seepies.net">coder@seepies.net</a>
+          <a target="_blank" href="<?=supporturl ?>">seepies.net Forumnews</a> - <?=versioninfo ?> - <?=copyright ?>
         </h5>
       </center>
     </td>
